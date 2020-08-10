@@ -1,9 +1,5 @@
+
 /* DISPLAY BY USER */
-
-
-
-
-
 function displayMine() {
     const accessToken = localStorage.getItem('SessionToken')
     fetch('http://localhost:3000/location/mine', {
@@ -37,7 +33,6 @@ function displayMine() {
             display.appendChild(header)
             header.textContent = "Looks like you haven't added any locations yet!"
             header.setAttribute("class", "noLocations")
-
 
         } else {
             for (i = 0; i < response.length; i++) {
@@ -85,8 +80,6 @@ function displayMine() {
             para.textContent = description
             editBtn.textContent = 'Edit'
             deleteBtn.textContent = 'Delete'
-
-
         }}
     )
 
@@ -122,8 +115,6 @@ function displayAll() {
                 display.appendChild(header)
                 header.textContent = "No locations yet!"
                 header.setAttribute("class", "noLocations")
-    
-    
             } else {
                 for (i = 0; i < response.length; i++) {
     
@@ -146,8 +137,7 @@ function displayAll() {
                 body.appendChild(header)
                 body.appendChild(subtitle)
                 body.appendChild(para)
-                
-    
+                   
                 card.setAttribute('id', current.id)
                 card.setAttribute('class', 'card')
                 body.setAttribute('class', 'card-body')
@@ -155,16 +145,9 @@ function displayAll() {
                 subtitle.setAttribute('class', 'card-subtitle')
                 para.setAttribute('class', 'card-text')
     
-                
-    
-                
-    
                 header.textContent = location 
                 subtitle.textContent = date
                 para.textContent = description
-                
-    
-    
             }
         }
     )}
@@ -204,8 +187,6 @@ function displayByTitle() {
                 display.appendChild(header)
                 header.textContent = "No locations yet!"
                 header.setAttribute("class", "noLocations")
-    
-    
             } else {
                 for (i = 0; i < response.length; i++) {
     
@@ -222,14 +203,12 @@ function displayByTitle() {
                     let date = current.date;
                     let description = current.description;
                 }
-    
                 display.appendChild(card)
                 card.appendChild(body)
                 body.appendChild(header)
                 body.appendChild(subtitle)
                 body.appendChild(para)
                 
-    
                 card.setAttribute('id', current.id)
                 card.setAttribute('class', 'card')
                 body.setAttribute('class', 'card-body')
@@ -237,19 +216,9 @@ function displayByTitle() {
                 subtitle.setAttribute('class', 'card-subtitle')
                 para.setAttribute('class', 'card-text')
     
-                
-    
-                
-    
                 header.textContent = location 
                 subtitle.textContent = date
-                para.textContent = description
-                
-    
-    
+                para.textContent = description                
             }
         }
     )}
-
-
-    
