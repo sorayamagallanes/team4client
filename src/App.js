@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Auth from './components/Auth/Auth';
+
 
 function App() {
+
+  const [sessionToken, setSessionToken] = useState(undefined);
+  console.log(sessionToken);
+
+  // let [one, two, three] = ['Fellowship of the Ring', 'Two Towers', 'Return of the King'];
+  // console.log(one, two, three); // this shows the following titles in order!
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* whatever we want to see on the page, we need to bring in here....<Navbar> from the Navbar.js and <Auth> from the Auth.js */}
+      <Navbar setSession={setSessionToken}></Navbar>
+      <Auth/>
     </div>
   );
 }
