@@ -20,3 +20,5 @@ const useStyles = makeStyles((theme) => ({
       </div>
     );
   }
+
+  // need to pull in props.clearToken and call it onClick -- not sure if I can move around OutlinedButtons()
