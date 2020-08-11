@@ -2,8 +2,8 @@
 *** USER SIGNUP ***
 ************************** */
 function userSignUp() {
-    let userEmail = document.getElementById('emailSignup').value;
-    let userPass = document.getElementById('pwdSignup').value;
+    let userEmail = document.getElementById('email').value;
+    let userPass = document.getElementById('password').value;
     let newUserData = {user: {email: userEmail, password: userPass}};
     console.log(`NEWUSERDATA ==> ${newUserData.user.email} ${newUserData.user.password}`)
 
@@ -31,8 +31,8 @@ function userSignUp() {
     *** USER LOGIN ***
     ************************** */
     function userLogin() {
-        let userEmail = document.getElementById('emailLogin').value;
-        let userPass = document.getElementById('pwdLogin').value;
+        let userEmail = document.getElementById('email').value;
+        let userPass = document.getElementById('password').value;
         console.log(userEmail, userPass);
 
         let userData = {user: {email: userEmail, password: userPass}};
