@@ -9,7 +9,7 @@ const Navbar = (props) => { // props is a placeholder for information that we pa
         <div>
             <nav>
                 <img id="logo" src={logo} alt="logo"></img>
-                <Logout/>
+                <Logout clearToken={props.clearToken}/>
             </nav>
         </div>
     )
