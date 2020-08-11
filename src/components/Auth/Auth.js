@@ -34,7 +34,6 @@ const Auth = (props) => {
                 password: password
             }
         }
-        console.log(bodyObj);
 
         fetch(url, {
             method: 'POST',
