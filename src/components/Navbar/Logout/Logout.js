@@ -21,4 +21,4 @@ const useStyles = makeStyles((theme) => ({
     );
   }
 
-  // need to pull in props.clearToken and call it onClick -- not sure if I can move around OutlinedButtons()
+  // need to pull in props.clearToken and call it onClick -- not sure if I can move around Outlined Buttons

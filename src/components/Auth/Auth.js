@@ -48,7 +48,7 @@ const Auth = (props) => {
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <h1>{title()}</h1>
                 <br></br>
                 <label htmlFor="email">Email:</label>
@@ -62,7 +62,7 @@ const Auth = (props) => {
                 <br></br>
                 <button onClick={loginToggle}>{login ? 'Signup' : 'Login'}</button>
                 <br></br>
-                <button type="submit">Submit</button>
+                <button onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     )
