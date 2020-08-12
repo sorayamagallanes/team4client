@@ -1,8 +1,11 @@
+
 import React, {useState} from 'react';
 import Slides from '../Home/Slides/Slides';
 import Button from '@material-ui/core/Button';
 import AddLocation from './AddLocation/AddLocation';
+import LocationCards from '../LocationCards/LocationCards';
 import DisplayLocation from './DisplayLocation/DisplayLocation';
+
 
 const Home = (props) => {
 
@@ -35,6 +38,9 @@ const Home = (props) => {
     return(
         <div>
             <h1>Welcome to the Home screen!</h1>
+
+            <Slides />
+            <LocationCards/>
             <Button onClick={() => showAdd()} variant="outlined" size="large">Add</Button>
             {/* <Slides /> */}
             <hr />
