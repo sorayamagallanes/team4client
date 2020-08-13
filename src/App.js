@@ -32,8 +32,8 @@ function App() {
     <div className="App">
     {/* whatever we want to see on the page, we need to bring in here....<Navbar> from the Navbar.js and <Auth> from the Auth.js */}
       <Navbar clearToken={clearToken}></Navbar>
-      {/* {splashPage()} */}
-      <Home/>
+      {splashPage()}
+      {/* <Home/> */}
     </div>
   );
 }
