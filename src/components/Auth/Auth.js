@@ -60,9 +60,9 @@ const Auth = (props) => {
                 <br></br>
                 <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <br></br>
-                <button onClick={loginToggle}>{login ? 'Signup' : 'Login'}</button>
+                <button className="submit" onClick={handleSubmit}>Submit</button>
                 <br></br>
-                <button onClick={handleSubmit}>Submit</button>
+                <button onClick={loginToggle}>{login ? 'Signup' : 'Login'}</button>
             </form>
         </div>
     )

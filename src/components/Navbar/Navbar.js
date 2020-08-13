@@ -1,8 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 import logo from '../../assets/Tripler.svg';
-import Logout from './Logout/Logout';
-import Button from '@material-ui/core/Button';
+// import Pattern from '../../assets/Pattern.svg';
+// import Button from '@material-ui/core/Button';
 
 
 const Navbar = (props) => { // props is a placeholder for information that we pass to a component from a parent component, only pass from parent to child not the other way around
@@ -11,7 +11,7 @@ const Navbar = (props) => { // props is a placeholder for information that we pa
         <div>
             <nav>
                 <img id="logo" src={logo} alt="logo"></img>
-                <Logout />
+                {/* <img id="Pattern" src={Pattern} alt="Pattern"></img> */}
                 {/* <Button onClick={props.clearToken()}>Kill It</Button> */}
             </nav>
         </div>

@@ -20,7 +20,7 @@ button {
     margin-top: 1em;
     border: none;
     height: 30px;
-    width: 100px;
+    width: 90px;
     background-color: #72efdd;
     color: #5e60ce;
     cursor: pointer;
@@ -36,8 +36,13 @@ h1 {
     font-weight: Bold;
     color: #5e60ce;
     margin-top: 20px;
+    font-size: 4vw;
 }
 
 label {
     color: #5e60ce;
+}
+
+.submit {
+    width: 140px;
 }
