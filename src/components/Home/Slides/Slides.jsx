@@ -26,13 +26,13 @@ const items = [
     src: require('../../../assets/TravelPicsCropped/4.jpg'),
     altText: 'Slide 4',
     
-    key: '3'
+    key: '4'
   },
   {
     src: require('../../../assets/TravelPicsCropped/5.jpg'),
     altText: 'Slide 5',
    
-    key: '3'
+    key: '5'
   },
 ];
 
