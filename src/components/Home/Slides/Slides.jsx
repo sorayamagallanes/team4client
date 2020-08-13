@@ -40,5 +40,5 @@ const items = [
 ];
 
 const Slides = () => <UncontrolledCarousel className="carousel" items={items} />;
-
+console.log('git push')
 export default Slides;
