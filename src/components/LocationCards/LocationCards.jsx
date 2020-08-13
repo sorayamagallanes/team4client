@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import {Row} from 'reactstrap';
 import './LocationCards.css';
+import LocationCard from './LocationCard/LocationCard';
+import UpdateCard from './UpdateCard/UpdateCard';
 
 
 const LocationCards = (props) => {
   const [locations, setLocations] = useState([]);
+  const [updating, setUpdating] = useState(false);
+  const [locationToUpdate, setLocationToUpdate] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:3000/location/mine', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': props.token
@@ -17,29 +21,42 @@ const LocationCards = (props) => {
     .then(res => res.json())
     .then(json => setLocations(json))
     .catch(err => console.log(err))
-  },[]);
-  // const deleteLocation = (location) => {
-  //   fetch(`http://localhost:3000/api/log/${location.id}`, {
-  //     method: 'DELETE',
-  //     headers: new Headers({
-  //       'Content-Type': 'application/json',
-  //       'Authorization': props.token
-  //     })
-  //   })
-  //   .then(() => props.fetchLocations())
-  // }
+  },[locations]);
+
+  const deleteLocation = (location) => {
+    console.log('Deleting', location.id)
+    fetch(`http://localhost:3000/location/delete/${location.id}`, {
+    method: 'DELETE',
+    headers: new Headers({
+        'Content-Type': 'application/json',
+        'Authorization': props.token
+    })
+    })
+    .catch(err => console.log(err))
+}
+
+const editUpdateLocation = (location) => {
+  setLocationToUpdate(location);
+}
+
+const updateOn = () => {
+  setUpdating(true);
+}
+
+const updateOff = () => {
+  setUpdating(false);
+}
+
   return (
-    
-    <Row>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Name</CardTitle>
-          <CardText>Description</CardText>
-          <Button>View</Button>
-          {/* <Button onClick={() => {deleteLocation(location)}}>Delete</Button> */}
-        </Card>
-      </Col>
-    </Row>
+    <div>
+      <h3>Here are your destinations</h3>
+      <Row>
+        <LocationCard locations={locations} deleteLocation={deleteLocation}
+        editUpdateLocation={editUpdateLocation} updateOn={updateOn}/>
+        {updating ? <UpdateCard locationToUpdate={locationToUpdate} updateOff={updateOff} 
+        token={props.token}/> : <></>}
+      </Row>
+    </div>
   
   );
 };
