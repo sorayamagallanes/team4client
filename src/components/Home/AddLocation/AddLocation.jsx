@@ -21,9 +21,7 @@ const AddLocation = (props) => {
         fetch('http://localhost:3000/location/create', {
             method: 'POST',
             body: JSON.stringify(newLoc),
-            // mode: "no-cors",
-            // credentials: 'omit',
-            headers: {                                  // CORS error with new Headers({headers}) as well
+            headers: {       
             'Content-Type': 'application/json',
             'Authorization': props.token
     }})
