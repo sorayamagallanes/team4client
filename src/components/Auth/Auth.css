@@ -1,0 +1,43 @@
+input {
+    border: none;
+    border-radius: 5px;
+    background-color: lightgrey;
+    height: 40px;
+    width: 200px;
+    text-indent: 5px;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    background-color: grey;
+    color: white;
+}
+
+button {
+    margin-top: 1em;
+    border: none;
+    height: 30px;
+    width: 100px;
+    background-color: #72efdd;
+    color: #5e60ce;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    font-family: 'Helvetica';
+    font-weight: Bold;
+    color: #5e60ce;
+    margin-top: 20px;
+}
+
+label {
+    color: #5e60ce;
+}
