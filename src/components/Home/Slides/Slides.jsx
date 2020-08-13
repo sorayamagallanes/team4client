@@ -1,40 +1,37 @@
 import React from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
+import '../Slides/Slides.css'
 
 const items = [
   {
-    src: require('../../../assets/TravelPicsCropped/camping-under-stars.jpeg'),
+    src: require('../../../assets/TravelPicsCropped/london.jpg'),
     altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header',
+    
+    header: 'Keep track of your travel goals.',
     key: '1'
   },
   {
-    src: require('../../../assets/TravelPicsCropped/colorful-shops.jpeg'),
+    src: require('../../../assets/TravelPicsCropped/beach.jpg'),
     altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header',
+    
     key: '2'
   },
   {
-    src: require('../../../assets/TravelPicsCropped/german-architecture.jpeg'),
+    src: require('../../../assets/TravelPicsCropped/3.jpg'),
     altText: 'Slide 3',
-    caption: 'Slide 3',
-    header: 'Slide 3 Header',
+    
     key: '3'
   },
   {
-    src: require('../../../assets/TravelPicsCropped/tropical-river-canoe.jpeg'),
+    src: require('../../../assets/TravelPicsCropped/4.jpg'),
     altText: 'Slide 4',
-    caption: 'Slide 4',
-    header: 'Slide 4 Header',
+    
     key: '3'
   },
   {
-    src: require('../../../assets/TravelPicsCropped/venice-waterway.jpeg'),
+    src: require('../../../assets/TravelPicsCropped/5.jpg'),
     altText: 'Slide 5',
-    caption: 'Slide 5',
-    header: 'Slide 5 Header',
+   
     key: '3'
   },
 ];
